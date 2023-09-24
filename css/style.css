@@ -1,0 +1,90 @@
+body {
+    background-color: black;
+    font-family: "Courier New", monospace;
+    color: #00FF00;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #000;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00FF00;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #33FF33;
+}
+
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #000;
+    color: #00FF00;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.matrix-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: black url('images/matrix-code.gif') repeat center center;
+    animation: matrix-scroll 20s linear infinite;
+}
+
+@keyframes matrix-scroll {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+a{
+    text-decoration: none;
+    color:#00FF00
+}
+.continue{
+    color:blue;
+    text-decoration: underline;
+}

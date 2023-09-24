@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="shortcut icon" href="images/141450459.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: black;
+            font-family: "Courier New", monospace;
+            color: #00FF00;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img id="sackboyImage" src="images/5034_Sackboy_Working.png" alt="saqboi" width="128px" height="128px">
+    <h1>Uh-Oh</h1>
+    <p>Sackboy Dropped zis file in the trashcan, click on sackboy to make him happier <a href="/index.html"><img src="https://cdn3.emoji.gg/emojis/8125-selfsatisfied.png" width="64px" height="64px" alt="selfsatisfied"></a></p>
+    <script> // JavaScript code to change the image on click
+        window.onload = function() {
+            const image = document.getElementById('sackboyImage');
+            image.addEventListener('click', function() {
+                if (image.getAttribute('src') === 'images/5034_Sackboy_Working.png') {
+                    image.setAttribute('src', 'images/5383_Sackboy_Joy.png'); // Change the image source
+                    image.setAttribute('alt', 'sackboy'); // Change the alt text
+                    image.setAttribute('title', 'working sackboy')
+                } else {
+                    image.setAttribute('src', 'images/5034_Sackboy_Working.png');
+                    image.setAttribute('alt', 'sackboy');
+                }
+            });
+        };</script>
+        
+</body>
+</html>
