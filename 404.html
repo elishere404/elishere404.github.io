@@ -3,51 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>elishere404 - Portfolio</title>
     <link rel="shortcut icon" href="images/141450459.png" type="image/x-icon">
-    <style>
-        body {
-            background-color: black;
-            font-family: "Courier New", monospace;
-            color: #00FF00;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        h1, p {
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
-    <img id="sackboyImage" src="images/5034_Sackboy_Working.png" alt="saqboi" width="128px" height="128px">
-    <h1>Uh-Oh</h1>
-    <p>Sackboy Dropped zis file in the trashcan, click on sackboy to make him happier <a href="/index.html"><img src="https://cdn3.emoji.gg/emojis/8125-selfsatisfied.png" width="64px" height="64px" alt="selfsatisfied"></a></p>
-    <script> // JavaScript code to change the image on click
-        window.onload = function() {
-            const image = document.getElementById('sackboyImage');
-            image.addEventListener('click', function() {
-                if (image.getAttribute('src') === 'images/5034_Sackboy_Working.png') {
-                    image.setAttribute('src', 'images/5383_Sackboy_Joy.png'); // Change the image source
-                    image.setAttribute('alt', 'sackboy'); // Change the alt text
-                    image.setAttribute('title', 'working sackboy')
-                } else {
-                    image.setAttribute('src', 'images/5034_Sackboy_Working.png');
-                    image.setAttribute('alt', 'sackboy');
-                }
-            });
-        };</script>
-        
+    <header>
+        <nav>
+            <div class="container">
+                <h1>elishere404</h1>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello, I'm elishere404. I'm a web developer passionate about creating stuff, take notes that im a beginner</p>
+          <a href="aboutme.html" class="continue">Continue...</a>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="project">
+                <a href="https://ucnaurobebi.net">
+                <img src="images/ucnaurobebi.JPG" alt="Project 1">
+                <h3>ucnaurobebi</h3>
+                <p>i haz website now<img src="images/epik.png" width="16px" height="16px" alt="718smiley">. first ever website i built.</p>
+            </a>
+            </div>
+            <div class="project">
+                <img src="https://media.tenor.com/pE_Ab4lv9BkAAAAC/bugsbunny-tired.gif" alt="Project 2">
+                <h3>tintas-diary</h3>
+                <p>im working on it </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me at misterbombastic772@gmail.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 elishere404</p>
+    </footer>
 </body>
 </html>
