@@ -41,27 +41,3 @@ weatherInfo.classList.add('active');
 weatherInfo.innerHTML = `<p class="error">Error: ${message}</p>`;
 }
 
-function changeToFahrenheit() {
-const temperatureElements = document.querySelectorAll('#weatherInfo p[data-unit="celsius"]');
-const button = document.querySelector('button');
-
-if (isFahrenheit === true) {
-temperatureElements.forEach(element => {
-    element.innerText = `Temperature: ${element.dataset.value}°C`;
-    element.dataset.unit = "celsius";
-});
-button.innerText = "Use Fahrenheit";
-isFahrenheit = false;
-} else {
-temperatureElements.forEach(element => {
-    const celsiusString = element.dataset.value;
-    const celsius = +celsiusString;
-    const fahrenheit = (celsius * 9/5) + 32;
-    const roundedFahrenheit = Math.round(fahrenheit * 100) / 100;
-    element.innerText = `Temperature: ${roundedFahrenheit}°F`;
-    element.dataset.unit = "fahrenheit";
-});
-button.innerText = "Use Degrees";
-isFahrenheit = true;
-}
-}
