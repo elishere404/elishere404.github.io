@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Lookup</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    text-align: center;
+    font-size: 18px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>IP Address Lookup</h1>
+        <form id="lookupForm">
+            <input type="text" id="ipInput" placeholder="Enter IP Address">
+            <button type="submit">Lookup</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+      document.getElementById('lookupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var ipAddress = document.getElementById('ipInput').value;
+    var resultDiv = document.getElementById('result');
+
+    fetch(`https://vpnapi.io/api/${ipAddress}?key=3e9355fd7b59494fb867544bd81252dc`)
+        .then(response => response.json())
+        .then(data => {
+            resultDiv.innerHTML = `
+                <p>IP: ${data.ip}</p>
+                <p>City: ${data.location.city}</p>
+                <p>Region: ${data.location.region}</p>
+                <p>Country: ${data.location.country}</p>
+                <p>Continent: ${data.location.continent}</p>
+                <p>Latitude: ${data.location.latitude}</p>
+                <p>Longitude: ${data.location.longitude}</p>
+                <p>Time Zone: ${data.location.time_zone}</p>
+                <p>ISP: ${data.network.autonomous_system_organization}</p>
+                <p>Network: ${data.network.network}</p>
+            `;
+        })
+        .catch(error => {
+            resultDiv.innerHTML = '<p>Error retrieving IP information.</p>';
+            console.error('Error:', error);
+        });
+});
+
+    </script>
+</script>
+</body>
+</html>
