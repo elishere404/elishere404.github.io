@@ -1,26 +1,2 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Index of projects/ </title>
-</head>
-<body>
-    <input type="file" id="fileInput" multiple>
-    <ul id="fileList"></ul>
-
-    <script>
-        document.getElementById('fileInput').addEventListener('change', handleFileSelect, false);
-
-        function handleFileSelect(event) {
-            const fileList = event.target.files;
-            const list = document.getElementById('fileList');
-            list.innerHTML = ''; // Clear previous list
-
-            for (let i = 0; i < fileList.length; i++) {
-                const listItem = document.createElement('li');
-                listItem.textContent = fileList[i].name;
-                list.appendChild(listItem);
-            }
-        }
-    </script>
-</body>
-</html>
+<a href="weather/">Weather App</a>
+<a href="ipLookup/">IP address Lookup </a>
