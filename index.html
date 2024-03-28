@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+Aa<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elishere404 - Portfolio</title>
+  <title>elishere404 - about me</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
 </head>
@@ -31,7 +31,7 @@
 
   <section id="about" class="container mt-5">
     <h2>About Me</h2>
-    <p>Welcome to my portfolio! I'm Elishere404, a passionate web developer based in <code lang="js">process.env.ELIS_LOCATION</code>. I love building responsive and dynamic web applications that provide meaningful solutions to real-world problems.</p>
+    <p>Welcome to my portfolio! I'm elishere404 or just elis, a passionate web developer based in <code lang="js">process.env.ELIS_LOCATION</code>. I love building responsive and dynamic web applications that provide meaningful solutions to real-world problems.</p>
     <p>In my free time, I enjoy exploring new technologies, contributing to open-source projects, and sharing my knowledge through blog posts and tutorials.</p>
   </section>
 
@@ -43,15 +43,15 @@
           <div class="card-body">
             <h5 class="card-title">Weather application</h5>
             <p class="card-text">a weather application where you type in a city and shows it's current weather condition</p>
-            <a href="projects/weatherApp/" class="btn btn-primary">View Project</a>
+            <a href="projects/weather/" class="btn btn-primary">View Project</a>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Project 2</h5>
-            <p class="card-text">Description of Project 2.</p>
+            <h5 class="card-title">IP lookup application</h5>
+            <p class="card-text">type any IP in and you got it </p>
             <a href="#" class="btn btn-primary">View Project</a>
           </div>
         </div>
@@ -61,13 +61,21 @@
           <div class="card-body">
             <h5 class="card-title">Project 3</h5>
             <p class="card-text">Description of Project 3.</p>
-            <a href="#" class="btn btn-primary">View Project</a>
+            <a onclick="redirect(link)" class="btn btn-primary">View Project</a>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+<script>
+const links = ["https://shorturl.at/kCTX1", "https://shorturl.at/gmHU3", "https://shorturl.at/elsKM"];
+const math = Math;
+const linkIndex = math.floor(math.random() * links.length);
+const link = links[linkIndex];
+function redirect(place){
+  window.location.href = place
+}
+</script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="script.js"></script>
