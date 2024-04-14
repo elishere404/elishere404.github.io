@@ -1,0 +1,21 @@
+.body {
+    background-color: #d9d9d9;
+  } 
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover{
+    transition: 0.5s;
+  }
+  a:not(:hover){
+transition: 1s;
+  }
+
+
+
+/* h1{
+  transform: translate(-375);
+} */

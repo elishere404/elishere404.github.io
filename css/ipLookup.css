@@ -1,0 +1,67 @@
+.body {
+    background-color: #000;
+    font-family: 'Courier New', Courier, monospace;
+  } 
+  .header-content {
+    display: flex;  
+    align-items: center;  
+}
+
+.header-content h1 {
+    font-size: 96px;
+    margin-right: 20px;  
+}
+  h1, p, a{
+    text-decoration: none;
+    color: lime;
+  }
+
+  a:hover{
+    text-decoration: dotted;
+  }
+  a:not(:hover){
+    text-decoration: none;
+  }
+
+  input, button, input[type="submit"]{
+    background-color: #000;
+    border: 1px solid lime;
+    font-family: 'Courier New', Courier, monospace;
+    color: lime
+  }
+  input::placeholder {
+    color: lime;
+  }
+  
+  input::-webkit-input-placeholder {
+    color: lime;
+  }
+  
+  input::-moz-placeholder {
+    color: lime;
+    opacity: 1;
+  }
+  
+  input:-ms-input-placeholder {
+    color: lime;
+  }
+  
+  input::-ms-input-placeholder {
+    color: lime;
+  }
+  input[type="submit"]:hover, button:hover{
+    background-color: lime;
+    color: #000;
+    transition: 1s;
+  }
+  input[type="submit"]:not(:hover), button:not(:hover){
+    transition: 1s;
+  }
+  #result {
+    background-color: #000;
+    border: 2px solid lime;
+    font-family: 'Courier New', Courier, monospace;
+    color: lime;
+    height: 357px;
+    text-align: center;
+  }

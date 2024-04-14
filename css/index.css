@@ -1,0 +1,56 @@
+.header-content {
+    display: flex;  
+    align-items: center;  
+}
+
+.header-content h1 {
+    font-size: 96px;
+    margin-right: 20px;  
+}
+
+.info, .seeMore{
+    font-size: 20px;
+
+}
+/* .seeMore{
+    margin-bottom: 20px;
+    text-align: center;
+} */
+.seeMore h1 {
+    font-size: 24px; /* Increase the font size */
+    color: #333; /* Darker font color for better readability */
+    padding: 10px 0; /* Padding to add some space around the text */
+}
+.seeMore a {
+    color: #007BFF; /* Typical link blue */
+    text-decoration: none;
+   
+}
+
+.seeMore a:hover {
+    text-decoration: underline;
+    color:red; /* Underline on hover for better interaction feedback */
+    transition: 1s; 
+}
+
+
+.projects{
+    margin: auto;
+    border: 3px solid green;
+    padding: 10px;
+    background-color: #42424F;
+    width: 1100px;
+    border-radius: 10px;
+    display: flex; /* Using Flexbox to align children horizontally */
+    gap: 190px; /* Optional: Adds space between the cards */
+    
+}
+.card, .card1, .card2 {
+    width: 239px;
+    height: 316px;
+    background-color: #808080;
+}
+.card img, .card1 img, .card2 img{
+    width: 217px;
+    height: 122px
+  }
